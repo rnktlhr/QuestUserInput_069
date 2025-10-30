@@ -29,6 +29,7 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.text.style.LineHeightStyle.Alignment.Companion.Bottom
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ModifierLocalBeyondBoundsLayout
 import androidx.compose.ui.res.stringResource
 
 
@@ -116,7 +117,11 @@ fun FormDataDiri(modifier: Modifier
                 .height(100.dp)
                 .width(300.dp)
         ){
-
+            Column(modifier = Modifier.padding(horizontal = 5.dp, vertical = 15.dp)){
+             Text(text="Nama  :" +nama, color= Color.White)
+             Text(text="Gender :" +gender, color = Color.White)
+             Text(text="Alamat :" +alamat, color = Color.White)
+            }
         }
     }
 }
