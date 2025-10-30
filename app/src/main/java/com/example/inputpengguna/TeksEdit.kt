@@ -65,7 +65,7 @@ fun FormDataDiri(modifier: Modifier
             gender.forEach { item ->
                 Row(modifier = Modifier.selectable(
                     selected = textJK == item,
-                    onClick = {textJK = item}
+                    onClick = {textJK == item}
                 ), verticalAlignment = Alignment.CenterVertically){
                     RadioButton(
                         selected = textJK == item,
@@ -119,7 +119,7 @@ fun FormDataDiri(modifier: Modifier
         ){
             Column(modifier = Modifier.padding(horizontal = 5.dp, vertical = 15.dp)){
              Text(text="Nama  :" +nama, color= Color.White)
-             Text(text="Gender :" +gender, color = Color.White)
+             Text(text="Gender :" +jenis, color = Color.White)
              Text(text="Alamat :" +alamat, color = Color.White)
             }
         }
